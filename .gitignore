@@ -19,6 +19,8 @@ dist/
 # Typescript v1 declaration files
 typings/
 
+uploads/
+
 # Optional npm cache directory
 .npm
 
