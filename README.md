@@ -1,6 +1,6 @@
 # Hero Gram Backend Server
 
-This server provides backend support for storing files and managing user interactions within the Hero Gram social app ecosystem.
+This server provides backend support for storing files and managing user interactions within the Hero Gram social app.
 
 ### Prerequisites
 
