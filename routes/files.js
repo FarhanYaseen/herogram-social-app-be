@@ -57,7 +57,7 @@ const fileFilter = (req, file, cb) => {
 
 const upload = multer({
     storage,
-    limits: { fileSize: 5 * 1024 * 1024 },
+    limits: { fileSize: 25 * 1024 * 1024 },
     fileFilter,
 });
 
@@ -147,14 +147,14 @@ router.get("/public/:filename", (req, res) => {
             'Content-Range': `bytes ${start}-${end}/${total}`,
             'Accept-Ranges': 'bytes',
             'Content-Length': chunksize,
-            'Content-Type': 'video/mp4' // Adjust this according to file type
+            'Content-Type': 'video/mp4'
         });
 
         file.pipe(res);
     } else {
         res.writeHead(200, {
             'Content-Length': total,
-            'Content-Type': 'video/mp4' // Adjust this according to file type
+            'Content-Type': 'video/mp4' 
         });
 
         fs.createReadStream(filePath).pipe(res);
